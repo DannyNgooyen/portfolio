@@ -1,0 +1,663 @@
+*{
+    margin: 0; 
+    padding: 0;
+
+    font-family: "Average", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(24, 9, 30, 0.70), rgba(24, 9, 30, 0.70)), url(images/diogenes.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition:  0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2; 
+        transition: 1s;
+    }
+    
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+}
+
+/*----------- Papers -----------*/
+.papers{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.papers-col{
+    flex-basis: 31%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.papers-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------- Skills-----------*/
+.skills{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;   
+}
+.skills-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-col img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------- Projects -----------*/
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.projects-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.projects-col img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.projects-col p{
+    padding: 0;
+}
+
+.projects-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+@media(max-width: 700px){
+    .projects-col img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+/*----------- Achievements -----------*/
+
+.achievements{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.achievements-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 20px 5px;
+}
+
+.achievements p{
+    padding: 10;  
+}
+
+.achievements h3{
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*----------- Footer -----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------- Papers Page -----------*/
+
+.papers-sub-header{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/writing-background.jpg);
+    background-position: center;
+    background-size: 100%; 
+    text-align: center;
+    color: #fff;
+}
+
+.papers-page h2{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.papers-grid {
+  display: grid;
+  margin: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.paper-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff3f3;
+}
+
+.paper-card h3 {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/*----------- Projects Page -----------*/
+
+.projects-sub-header{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/programming-background.jpg);
+    background-position: center;
+    background-size: 100%; 
+    text-align: center;
+    color: #fff;
+}
+
+.project-card{
+    margin: 5%;
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    background: #fff3f3;
+    padding: 20px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-card .text-content {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and p vertically */
+    gap: 10px; /* Add spacing between h1 and p */
+    flex: 1; /* Allow text content to take up available space */
+}
+
+.project-card p{
+    padding: 10px; 
+    font-size: 1.2rem;
+    line-height: 1.9; 
+    font-weight: 400;
+}
+
+.project-card .text-content h1 {
+    margin-left: 0;
+    padding-left: 10px; 
+    text-align: left; 
+}
+
+.project-card img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: auto;
+}
+
+
+@media(max-width: 700px){
+    .project-card{
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .project-card img{
+        width: 100%;
+        margin-left: 20px;
+    }
+
+}
+
+/*----------- About Page -----------*/
+
+.about-sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/anonymous.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:  #fff;
+}
+
+.about-me{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.about-col{
+    flex-basis: 40%;
+    padding: 30px 2px;
+}
+
+.about-me h1{
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-me p{
+    padding: 0; 
+    font-size: 1.2rem;
+    line-height: 1.8; 
+    font-weight: 400;
+}
+
+.about-image {
+    position: relative;
+    flex-basis: 60%;
+}
+
+.about-image img {
+    width: 150%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+.password-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.password-section input {
+    margin-top: 15px; 
+}
+
+#password {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#error-message {
+    display: none; /* Hidden by default */
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 85%; /* adjust for image */
+    background-color: #000;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    pointer-events: none; 
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+@media (max-width: 700px) {
+    .about-me {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .about-col {
+        flex-basis: 100%; 
+        text-align: center; 
+    }
+
+    .about-col img {
+        margin: 20px auto; 
+    }
+
+    .overlay {
+        height: 80%; /* adjust for image */
+    }
+}
+
+
+/*----------- Lab Page -----------*/
+
+.lab-sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/construction-background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:  #fff;
+    margin-bottom: 40px;
+}
+
+/* Section Styles */
+.cooking-page, .leveling-page {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #fff3f3; /* Soft pinkish background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+}
+
+/* General layout styling */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.text-section {
+    flex-basis: 60%; /* Slightly larger section */
+    padding-right: 20px;
+}
+
+.image-section {
+    flex-basis: 35%; /* Smaller section */
+    text-align: center;
+}
+
+.text-section h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Optional - Add a box shadow to the image section for emphasis */
+.image-section img {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Layout - Vertical Stack */
+@media(max-width: 700px) {
+    .content-wrapper {
+        flex-direction: column; /* Stacked vertically on mobile */
+        text-align: left;
+    }
+
+    .text-section {
+        flex-basis: 100%; /* Full width */
+        padding-right: 0;
+    }
+
+    .image-section {
+        flex-basis: 100%; /* Full width */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 100%; /* Image takes full width */
+    }
+}
